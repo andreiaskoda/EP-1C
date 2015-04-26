@@ -66,7 +66,7 @@ public class Matriz {
         for(int i = 0; i < 3; i++)
             for(int j = 0; j < 3; j++)
                 for(int k = 0; k < 3; k++)
-                    produto.mat[i][j] =+ this.mat[i][k]*m.mat[k][j];
+                    produto.mat[i][j] += this.mat[i][k]*m.mat[k][j];
         
         return produto;
     }
