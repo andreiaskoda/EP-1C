@@ -41,11 +41,18 @@ public class Pratica33 {
         System.out.println(primeira);
         System.out.println(segunda);
         
+        Matriz soma = new Matriz(3, 3);
+        Matriz produto = new Matriz(3, 3);
+        
+        soma = primeira.soma(segunda);
+        
         // Imprimindo a matriz soma
-        System.out.println(primeira.soma(segunda));
+        System.out.println(soma);
+        
+        produto = primeira.prod(segunda);
         
         // Imprimindo a matriz produto
-        System.out.println(primeira.prod(segunda));
+        System.out.println(produto);
         
     }
 }
