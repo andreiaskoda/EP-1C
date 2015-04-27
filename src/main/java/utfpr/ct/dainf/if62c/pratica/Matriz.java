@@ -45,14 +45,19 @@ public class Matriz {
      * @param m A matriz a ser somada
      * @return A soma das matrizes
      */
-    public Matriz soma(Matriz m) {
-        Matriz soma = new Matriz(mat.length, mat[0].length);
+    public Matriz soma(Matriz m) {   
+        Matriz retornada;
+
+        retornada = new Matriz(mat.length,mat[0].length);
         
-        for (int i = 0; i < mat.length; i++) 
-            for (int j = 0; j < mat[0].length; j++)
-                soma.mat[i][j] = m.mat[i][j] + this.mat[i][j];        
-        
-        return soma;
+        for(int i=0;i < mat.length ;i++)
+        {
+            for(int j=0;j < mat[0].length ;j++)
+            {
+                retornada.mat[i][j] = m.mat[i][j] + mat[i][j];
+            }
+        }
+        return retornada;
     }
 
     /**
@@ -61,14 +66,17 @@ public class Matriz {
      * @return O produto das matrizes
      */
     public Matriz prod(Matriz m) {
-        Matriz produto = new Matriz(mat.length, mat[0].length);
-        
-        for (int i = 0; i < mat.length; i++)
-            for (int j = 0; j < mat[0].length; j++)
-                for(int k = 0; k < mat[0].length; k++)
-                    produto.mat[i][j] += this.mat[i][k]*m.mat[k][j];
-        
-        return produto;
+        int i, j, k;
+       
+       Matriz Produto = new Matriz(mat.length, m.mat[0].length);
+       
+        for (i=0; i < mat.length; i++)
+            for (j = 0; j < m.mat[0].length; j++)
+                for(k = 0 ; k < mat[0].length ; k++) {
+                    Produto.mat[i][j] += mat[i][k] * m.mat[k][j];
+                }
+       
+        return Produto;
     }
 
     /**

@@ -38,21 +38,21 @@ public class Pratica33 {
         m2[2][2] = 2.0;
         
         // Imprimindo as matrizes originais
-        System.out.println("Matriz 1 original: " + primeira);
-        System.out.println("Matriz 2 original: " + segunda);
+        System.out.println("Matriz original 1: ");
+        System.out.println(primeira);
+        System.out.println("Matriz original 2: ");
+        System.out.println(segunda);
         
-        Matriz soma = new Matriz(3, 3);
-        Matriz produto = new Matriz(3, 3);
-        
-        soma = primeira.soma(segunda);
+        Matriz soma = primeira.soma(segunda);
+        Matriz produto = primeira.prod(segunda);
         
         // Imprimindo a matriz soma
-        System.out.println("Soma: " + soma);
-        
-        produto = primeira.prod(segunda);
-        
+        System.out.println("Soma: ");
+        System.out.println(soma);
+
         // Imprimindo a matriz produto
-        System.out.println("Produto: " + produto);
+        System.out.println("Produto: ");
+        System.out.println(produto);
         
     }
 }
