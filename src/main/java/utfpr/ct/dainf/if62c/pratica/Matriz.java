@@ -49,7 +49,7 @@ public class Matriz {
         Matriz soma = new Matriz(mat.length, mat[0].length);
         
         for (int i = 0; i < mat.length; i++) 
-            for (int j = 0; j < mat[i].length; j++)
+            for (int j = 0; j < mat[0].length; j++)
                 soma.mat[i][j] = m.mat[i][j] + this.mat[i][j];        
         
         return soma;
@@ -64,8 +64,8 @@ public class Matriz {
         Matriz produto = new Matriz(mat.length, mat[0].length);
         
         for (int i = 0; i < mat.length; i++)
-            for (int j = 0; j < mat[i].length; j++)
-                for(int k = 0; k < mat.length; k++)
+            for (int j = 0; j < mat[0].length; j++)
+                for(int k = 0; k < mat[0].length; k++)
                     produto.mat[i][j] += this.mat[i][k]*m.mat[k][j];
         
         return produto;
